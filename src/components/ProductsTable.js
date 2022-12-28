@@ -100,7 +100,13 @@ function ProductsTable() {
 
 	return (
 		<>
-			<Table dataSource={products} columns={columns} pagination={{ pageSize: 5 }} loading={loading} />
+			<Table
+				rowKey={(record) => record.id}
+				dataSource={products}
+				columns={columns}
+				pagination={{ pageSize: 5 }}
+				loading={loading}
+			/>
 		</>
 	);
 }
